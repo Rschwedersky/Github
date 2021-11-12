@@ -12,9 +12,11 @@ function loadList(){
             let item = atualizaLista[i];
             const novoElemento = document.createElement('li')
             novoElemento.id = `item-${item.id}`
+            novoElemento.className = item.feito ? 'feito' : ''
             novoElemento.innerHTML = `
       <input
         type="checkbox"
+        ${item.feito ? 'checked=""' : ''}
         name="chk-${item.id}"
         onclick="marcaFeito(${item.id})"
       >
@@ -25,14 +27,9 @@ function loadList(){
         &times;
       </button>
     `
-        listaUl.appendChild(novoElemento);
-       alert (item.feito)
-       if(item.feito == true){
-        novoElemento.className = 'feito'
-        document.getElementByName(`"chk-${item.id}"`).checked= item.feito
-    }
-        tudoLista.push(item);
-                   
+            listaUl.appendChild(novoElemento);
+            tudoLista.push(item);  
+                 
 }}}
 
 
@@ -99,22 +96,6 @@ function removeItem(index) {
     document.location.reload(); //nao sei porque nao esta removendo o mesmo indice sem o reload
 }
 function marcaFeito(index) {
-  // verifica se existe esse índice na lista
-  if (lista[index]) {
-    // pega item da lista
-    const item = lista[index]
-  
-    // inverte o valor de feito
-    item.feito = !(item.feito)
-
-    // pega o elemento do html
-    const elemento = document.getElementById(`item-${index}`)
-
-    // atualiza a classe para riscar ou não
-    elemento.className = item.feito ? 'feito' : ''
-  }
-}
-function marcaFeito(index) {
     // verifica se existe esse índice na lista
     if (tudoLista[index]) {
       // pega item da lista
@@ -124,7 +105,7 @@ function marcaFeito(index) {
       elemento.className = item.feito ? 'feito' : ''
       tudoLista[index]= item
       const listaJSON = JSON.stringify(tudoLista);
-      localStorage.setItem('tudoLista', listaJSON);
+       localStorage.setItem('tudoLista', listaJSON);
       
     }
   }
