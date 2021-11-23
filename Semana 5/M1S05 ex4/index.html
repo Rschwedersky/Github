@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head profile="">
+  <link rel="icon" 
+   type="image/png" 
+   href="favicon.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Mercadao</title>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper site-header__wrapper">
+      <h1>
+        Mercadao
+      </h1>
+      <p>Escreva as tarefas no input e Adicione com o botão 'Adicionar'. Adicionadas, elas podem ser riscadas quando feitas pelo 'checkbox' ou deletadas através do botão vermelho .</p>
+    </div>
+  </header>
+  <div class="flex-container" >
+    <h2>Escreva as mercadorias no input e clique em Adicionar</h2>
+  </div>
+  <div class="flex-container" >
+    <input class="input" type="text" id="tarefa" required="required" placeholder="Escreva a tarefa a ser adicionada">
+    <button class="addButton" id="add">Adicionar</button>
+    <button class="addButton" id="salva">Salva</button>
+    <button class="addButton" id="load">Carregar Lista</button>
+        
+  </div>
+  <div class="flex-container2" > 
+    <ul id="lista" class= "flex-lista"></ul>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
