@@ -3,12 +3,12 @@ import {Endereco} from './Endereco.js';
 import {Cliente} from './cliente.js';
 import {Conta} from './Conta.js';
 
-let end = new Endereco('logradouro', 'numero', 'cidade', 'estado', 'pais', '12345-123')
+/* let end = new Endereco('logradouro', 'numero', 'cidade', 'estado', 'pais', '12345-123')
 
 let cliente = new Cliente ('nome', 'cpf','celular', end);
 console.log(cliente.endereco.cidade)
 let conta = new Conta ('12312', 2, cliente);
-console.log(conta.saldo);
+console.log(conta.saldo);/*  */
 
 
 const formCliente = document.querySelector('#formulario-cliente')
