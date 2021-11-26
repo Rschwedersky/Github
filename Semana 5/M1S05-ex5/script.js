@@ -1,14 +1,14 @@
 
 import {Endereco} from './Endereco.js';
 import {Cliente} from './cliente.js';
+import {Conta} from './Conta.js';
 
-/*  let end = new Endereco('logradouro', 'numero', 'cidade', 'estado', 'pais', 'cep')
+let end = new Endereco('logradouro', 'numero', 'cidade', 'estado', 'pais', 'cep')
 
 let cliente = new Cliente ('nome', 'cpf','celular', end);
 console.log(cliente.endereco.cidade)
-
-let array = new Array ('logradouro', '2', 'cidade', 'estado', 'pais', 'cep')
-     console.log( array.every(item => typeof(item) === 'string')) */
+let conta = new Conta ('12312', 3, cliente);
+console.log(conta.saldo);
 
 
 const formCliente = document.querySelector('#formulario-cliente')
