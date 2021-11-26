@@ -1,6 +1,7 @@
 export class Endereco {
     constructor(logradouro, numero, cidade, estado, pais, cep) {
-      if (typeof(logradouro&& numero&& cidade&& estado&& pais&& cep)!= 'string'){
+     let array = new Array (logradouro, numero, cidade, estado, pais, cep);
+      if(array.some(item => typeof(item)!= 'string')){  
         throw alert('endereço errado');
       }
       this.logradouro = logradouro;
