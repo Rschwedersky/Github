@@ -1,11 +1,11 @@
 export class Endereco {
     constructor(logradouro, numero, cidade, estado, pais, cep) {
      let array = new Array (logradouro, numero, cidade, estado, pais, cep);
-     let result = /^[0-9]{5}-[0-9]{3}$/.test(cep); 
+     let testecep = /^[0-9]{5}-[0-9]{3}$/.test(cep); 
      if(array.some(item => typeof(item)!= 'string')){  
         throw alert('endereço errado');
       }
-      if(!result){  
+      if(!testecep){  
        throw alert('cep errado');
       }
       this.logradouro = logradouro;
