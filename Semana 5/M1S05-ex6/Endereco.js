@@ -15,7 +15,5 @@ export class Endereco {
       this.pais = pais;
       this.cep = cep;
     }
-isValidBRZip (cep){
-      return /^[0-9]{5}-[0-9]{3}$/.test(zip);}
-    
+
     }
