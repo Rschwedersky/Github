@@ -8,7 +8,7 @@ import {Conta} from './Conta.js';
 let cliente = new Cliente ('nome', 'cpf','celular', end);
 console.log(cliente.endereco.cidade)
 let conta = new Conta ('12312', 2, cliente);
-console.log(conta.saldo); */
+console.log(conta.saldo);/*  */
 
 
 const formCliente = document.querySelector('#formulario-cliente')
