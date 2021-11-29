@@ -1,2 +1,2 @@
-const mensagemOla = () => console.log("Olá Mundo")
-mensagemOla();
+const mensagemOla = (nome) => console.log(`Olá ${nome}`);
+mensagemOla('Mariana');
