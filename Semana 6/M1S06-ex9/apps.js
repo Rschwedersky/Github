@@ -8,4 +8,4 @@ let funcionario = [new Funcionario('Patricia', '02857510','atendente', 1200),
  function loopImprime (arr) {
     arr.forEach(obj => obj.imprime()); 
  }
-console.log(loopImprime(funcionario));
+loopImprime(funcionario);
