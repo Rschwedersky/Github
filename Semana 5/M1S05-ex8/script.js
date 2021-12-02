@@ -2,13 +2,21 @@
 import { Endereco } from './Endereco.js';
 import {Cliente} from './cliente.js';
 import {Conta} from './Conta.js';
+import { Transacao } from './Transacao.js';
 
- /*let end = new Endereco('logradouro', 'numero', 'cidade', 'estado', 'pais', '12345-123')
+ let end = new Endereco('logradouro', 'numero', 'cidade', 'estado', 'pais', '12345-123')
 
-let cliente = new Cliente ('nome', 'cpf','celular', end);
-console.log(cliente.endereco.cidade)
-let conta = new Conta ('12312', 2, cliente);
-console.log(conta.saldo); */
+let cliente = new Cliente ('nome', '05644109771','celular', end);
+
+let conta = new Conta ('12312', 10, cliente);
+let conta2 = new Conta ('12312', 20, cliente);
+
+new Transacao(conta,200).deposito()
+console.log(conta.saldo)
+new Transacao (conta,50).transferencia(conta2)
+console.log(conta2.saldo)
+
+
 //let cpf = '0544109771'
 //console.log(Cliente.validaCPF(cpf))
 

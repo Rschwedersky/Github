@@ -11,6 +11,7 @@ export class Conta {
         if(typeof(numeroDaConta)!= 'string'){  
             throw alert('numero da conta errado');
           }
+    this.cliente = cliente;      
     this.numeroDaConta = numeroDaConta;
     this.saldo = saldo;
     }
