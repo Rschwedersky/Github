@@ -1,15 +1,15 @@
 import {Conta} from './Conta.js';
 export class Transacao {
     static Id = 0;
-    constructor(conta, valorDaTransacao, contaTransferencia){
+    constructor(conta, valorDaTransacao, contaTransferencia,){
         if (conta instanceof Conta == false){
             throw alert('conta errado');
           }
-          this.date = new Date();
           this.contaTransferencia = contaTransferencia;
           this.idDeTransacao = Transacao.Id++;
           this.conta = conta;
           this.valorDaTransacao = valorDaTransacao;
+          this.date = new Date();
           
     }
   
