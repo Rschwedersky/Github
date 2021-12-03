@@ -11,10 +11,10 @@ let cliente = new Cliente ('nome', '05644109771','celular', end);
 let conta = new Conta ('12312', 10, cliente);
 let conta2 = new Conta ('12312', 20, cliente);
 
- new Transacao(conta,200).deposito()
+let deposito = new Transacao(conta,200)
 console.log(conta.saldo)
-let transacao = new Transacao (conta,50 ,conta2)
-transacao.transferencia()
+let transacao = new Transacao (conta,300 ,conta2)
+transacao.executarTransacao()
 console.log(conta2.saldo)
 //let Id = new Transacao (conta,50 ,conta2)
 console.log(transacao.idDeTransacao , transacao.date)

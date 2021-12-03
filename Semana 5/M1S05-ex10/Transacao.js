@@ -12,15 +12,21 @@ export class Transacao {
           this.date = new Date();
           
     }
-  
+    executarTransacao(){
+        if(this.contaTransferencia != null){this.transferencia()}
+        else this.deposito()
+    }
+
     transferencia (){
         let saldo = this.conta.saldo;
+        if(this.valorDaTransacao >300) {throw alert('excedeu o valor da transação')}
         saldo = saldo - this.valorDaTransacao;
         this.contaTransferencia.saldo = this.contaTransferencia.saldo + this.valorDaTransacao;
     }
    
     deposito (){
-         let saldo = this.conta.saldo;
+        let saldo = this.conta.saldo;
+        if(this.valorDaTransacao >300) {throw alert('excedeu o valor da transação')}
         saldo = saldo + this.valorDaTransacao;
         this.conta.saldo = saldo;
         
