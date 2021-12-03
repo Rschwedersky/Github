@@ -1,16 +1,21 @@
 import {Conta} from './Conta.js';
 export class Transacao {
-    constructor(conta, valorDaTransacao){
+    static Id = 0;
+    constructor(conta, valorDaTransacao, contaTransferencia,){
         if (conta instanceof Conta == false){
             throw alert('conta errado');
           }
+          this.contaTransferencia = contaTransferencia;
+          this.idDeTransacao = Transacao.Id++;
           this.conta = conta;
-          this.valorDaTransacao = valorDaTransacao
+          this.valorDaTransacao = valorDaTransacao;
+          
     }
-    transferencia (conta){
+  
+    transferencia (){
         let saldo = this.conta.saldo;
         saldo = saldo - this.valorDaTransacao;
-        conta.saldo = conta.saldo + this.valorDaTransacao;
+        this.contaTransferencia.saldo = this.contaTransferencia.saldo + this.valorDaTransacao;
     }
    
     deposito (){

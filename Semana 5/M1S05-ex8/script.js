@@ -13,9 +13,11 @@ let conta2 = new Conta ('12312', 20, cliente);
 
 new Transacao(conta,200).deposito()
 console.log(conta.saldo)
-new Transacao (conta,50).transferencia(conta2)
+let transacao = new Transacao (conta,50 ,conta2)
+Id.transferencia()
 console.log(conta2.saldo)
-
+//let Id = new Transacao (conta,50 ,conta2)
+console.log(transacao.idDeTransacao)
 
 //let cpf = '0544109771'
 //console.log(Cliente.validaCPF(cpf))
