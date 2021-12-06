@@ -1,0 +1,22 @@
+body{
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bolder;
+}
+button{
+    height: auto;
+}
+div{
+    font-weight: bolder;
+    margin-top: 10px;
+    line-height: 15px;
+    align-content: center;
+    }
