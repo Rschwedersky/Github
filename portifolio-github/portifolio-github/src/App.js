@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1>Olá, portfolio!</h1>
       <Resumo img= 'https://github.com/Rschwedersky.png' name= "Foto-perfil"/>
-      <Repositorio/>
+      <Repositorio titulo="Titulo1" descricao="Descrição1" destacar={false}/>
     </div>
   );
 }
