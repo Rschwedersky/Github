@@ -1,6 +1,6 @@
-export const Resumo = () => {
+export const Resumo = ({img, name}) => {
     return (<div>
-      <img src='https://github.com/Rschwedersky.png' className="App-logo" alt="Foto-perfil" />
+      <img src={img} alt={name} />
       <h2>Minha Foto</h2>
       </div>)
   };
