@@ -1,5 +1,36 @@
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffff26;
+   background: url("./media/background.jpg") no-repeat center center;
+  background-size: cover;
+  background-position-y: top;
+  
+}
+html {
+  font-size: 16px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+
+  
+}
+
+body {
+  background-color: #ffff26;
+   background: url("./media/background.jpg") no-repeat center center;
+  background-size: cover;
+  background-position-y: top;
+
+}
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {

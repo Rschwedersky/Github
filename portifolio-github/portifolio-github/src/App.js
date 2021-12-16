@@ -1,6 +1,6 @@
-
-import { Repositorio, Resumo } from './components';
-import './App.css';
+import {Repositorio} from './components/Repositorio'
+import { Resumo } from './components';
+import styles from './App.module.css';
 
 function App() {
   const lista_repositorios = [{id:1, titulo:'primeiro', descricao:'descricao1'},
