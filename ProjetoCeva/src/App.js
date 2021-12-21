@@ -1,6 +1,6 @@
 
 import styles from './App.module.css';
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useState} from 'react';
 import { CardCeva } from './components/CardCeva';
 
 
