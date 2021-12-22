@@ -28,7 +28,7 @@ return (
   <CardDescriptionItem title="abv:" text={dados.abv} />
   <CardDescriptionItem title="ibu:" text={dados.ibu} />
   <CardDescriptionItem1 title="description:" text={dados.description} />
-  <span className={styles["card__spec-title"]}>Srm</span><span className={styles["dot"]} style={{backgroundColor:COLOR_MAP[dados.srm]}}></span>
+  <span className={styles["card__spec-title"]}>Cor da Ceva:</span><span className={styles["dot"]} style={{backgroundColor:COLOR_MAP[dados.srm]}}></span>
 </div>
 </div>
 );
