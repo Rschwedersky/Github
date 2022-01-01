@@ -8,6 +8,7 @@ function App() {
   const [listaCevas, setListaCeva] = useState([]);
   const [listaCevasFiltrada, setListaCevaFiltrada] = useState([]);
   
+  
   useEffect(() => {
   fetch(`https://api.punkapi.com/v2/beers?page=1&per_page=80`)
  .then(response => response.json())
