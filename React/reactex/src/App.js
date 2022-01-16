@@ -7,10 +7,10 @@ const initialState = {date:[]};
 function reducer(state, action) {
   switch (action.type) {
     case 'increment':
-      return {date:[...state, new Date()]}
+      return {date:[...state.date, (new Date().toLocaleString())]}
       
     case 'decrement':
-      return state.slice(0,-1);
+      return  {date:[...state.date].slice(0,-1)}
     default:
       throw new Error();
   }
@@ -25,7 +25,7 @@ function App() {
       <button onClick={() => dispatch({type: 'decrement'})}>-</button>
       <button onClick={() => dispatch({type: 'increment'})}>+</button>
       <ul>
-      {state.date.map((item,index) => console.log(item))}
+      {state.date.map((item,index) => <li key={index}>{item}</li>)}
       </ul>
     </>
   );
