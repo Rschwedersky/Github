@@ -1,19 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { useState } from 'react';
 import { AuthProvider} from './contexts/auth';
-import { Logado } from './components/Logado';
+import { Tema } from './components/Tema';
+import { Layout } from './components/Layout';
+
+
 
 
 
 function App() {
-  const [logado, setLogado] = useState(true);
-  
+
   
   return (
     <AuthProvider>
       <>
-      <Logado/>
+      <Tema/>
+      <Layout/>
+    
+
     </>
       
     </AuthProvider>
