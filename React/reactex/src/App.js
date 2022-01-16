@@ -1,34 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 
-const initialState = {date:[]};
+const initialState = {result:0};
 
-function reducer(state, action) {
-  switch (action.type) {
-    case 'increment':
-      return {date:[...state, new Date()]}
-      
-    case 'decrement':
-      return state.slice(0,-1);
+
+const reducer = (state, { type, payload }) => {
+  switch (type) {
+    case 'add':
+      return { result: state.result + payload.valor };
     default:
-      throw new Error();
+      return state;
   }
-}
+};
 
-function App() {
+
+function Counter() {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   
   return (
     <>
-      <h1>Lista de Datas</h1>
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
-      <ul>
-      {state.date.map((item,index) => console.log(item))}
-      </ul>
+      
+      <label style={{ paddingBottom: '10px' }}>
+          Numero:
+          <input type="number" value={state?.valor} onChange={(e) => dispatch({ payload:{ valor: parseInt(e.target.value) }})} />
+        </label>
+        <label style={{ paddingBottom: '10px' }}>
+          Operação:
+          <select value={state?.type} onChange={(e) => dispatch({ type: (e.target.value)})} >
+            <option value={"add"}>add</option>
+            <option value={"sub"}>sub</option>
+            <option value={"mult"}>mult</option>
+            <option value={"div"}>div</option>
+          </select>
+        </label>
+
+        <p>{`Resultado: ${state?.result}`}</p>
     </>
   );
 }
 
-export default App;
+export default Counter;
