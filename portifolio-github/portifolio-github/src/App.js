@@ -1,5 +1,5 @@
 import {Repositorio} from './components/Repositorio'
-import { Resumo } from './components';
+import { Resumo } from './components/Resumo';
 import styles from './App.module.css';
 
 function App() {
@@ -11,12 +11,15 @@ function App() {
 if(lista_repositorios.length === 0){return (<div className="App">
 <h1>Nenhum Repositorio disponivel</h1></div>) }
  
-  return (
-    <div className="App">
-      <h1>Meu portifólio Github</h1>
+  return (<>
+    <div className={styles.container} styles={{backgroundColor: "red"}}>
+      <h1 className={styles.pageTitle}>Meu portifólio Github</h1>
       <Resumo img= 'https://github.com/Rschwedersky.png' name= "Foto-perfil"/>
+      <div className={styles.containerRepositorio}>
       <Repositorio dados={lista_repositorios} destacar={false}/>
+      </div>
     </div>
+    </>
   );
 }
 
