@@ -12,7 +12,7 @@ const lista_repositorios = [{id:1, titulo:'primeiro', descricao:'descricao1'},
 
 function App() {
   const[repositorios, setRepositorios] = useState(lista_repositorios);
-  
+  const [idSelecionado, setIdSelecionado] = useState(3);
   
   if(repositorios.length === 0){return (<div className="App">
           <h1>Nenhum Repositorio disponivel</h1></div>) }
@@ -24,7 +24,7 @@ function App() {
       <h1 className={styles.pageTitle}>Meu portifólio Github</h1>
       <Resumo img= 'https://github.com/Rschwedersky.png' name= "Foto-perfil"/>
       <div className={styles.containerRepositorio}>
-      <Repositorio dados={repositorios} destacar={false}/>
+      <Repositorio dados={repositorios} destacar={idSelecionado}/>
       </div>
     </div>
     </>
