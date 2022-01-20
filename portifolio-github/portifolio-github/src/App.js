@@ -30,6 +30,10 @@ const handleNomeUsuario = (event)=>{
   setNomeDoUsoario(event);
 };
 
+const handleBuscar = (event)=>{
+  console.log('busca');
+};
+
 
 if(repositorios2.length === 0){return (<div className="App">
           <h1>Nenhum Repositorio disponivel</h1></div>) }
@@ -40,7 +44,7 @@ if(repositorios2.length === 0){return (<div className="App">
       <Resumo img= 'https://github.com/Rschwedersky.png' name= "Foto-perfil"/>
       <input type="text" onChange={(event) => {
             handleNomeUsuario(event.target.value);
-          }}value={nomeDoUsoario} /><button type='button'>Buscar</button>
+}}value={nomeDoUsoario} /><button type="button"onClick={handleBuscar} >Buscar</button>
       <div className={styles.containerRepositorio}>
       <Repositorio dados={repositorios2} destacar={idSelecionado}/>
       </div>
