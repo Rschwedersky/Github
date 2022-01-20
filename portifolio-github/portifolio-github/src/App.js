@@ -40,7 +40,7 @@ if(repositorios2.length === 0){return (<div className="App">
             handleNomeUsuario(event.target.value);
 }}value={nomeDoUsoario} /><button type="button"onClick={consultaRepos} >Buscar</button>
       <div className={styles.containerRepositorio}>
-      <Repositorio dados={repositorios2} destacar={idSelecionado}/>
+      <Repositorio dados={repositorios2} destacar={idSelecionado} func={setIdSelecionado}/>
       </div>
     </div>
     </>
