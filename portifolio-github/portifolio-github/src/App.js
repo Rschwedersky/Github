@@ -7,31 +7,25 @@ import{useState, useEffect} from 'react'
 function App() {
   const [idSelecionado, setIdSelecionado] = useState(424423847);
   const[repositorios2, setRepositorios2] = useState([]);
-  const [nomeDoUsoario, setNomeDoUsoario] = useState(3);
+  const [nomeDoUsoario, setNomeDoUsoario] = useState("Rschwedersky");
 
   
   const consultaRepos = async() => {
-    try {  const url = `https://api.github.com/users/Rschwedersky/repos`
+    try {  const url = `https://api.github.com/users/${nomeDoUsoario}/repos`
            const response = await fetch(url)
            const json = await response.json();
-           console.log(json);     
+           setRepositorios2(json);  
     return json;
   }
   catch(error){console.log(error)}
   };
 
   useEffect(() => {
-    consultaRepos().then((repos) => {setRepositorios2(repos);console.log('use',repos);
-   console.log(repositorios2)
-  });
-}, []);
+    consultaRepos();
+  }, []);
 
 const handleNomeUsuario = (event)=>{
   setNomeDoUsoario(event);
-};
-
-const handleBuscar = (event)=>{
-  console.log('busca');
 };
 
 
@@ -44,7 +38,7 @@ if(repositorios2.length === 0){return (<div className="App">
       <Resumo img= 'https://github.com/Rschwedersky.png' name= "Foto-perfil"/>
       <input type="text" onChange={(event) => {
             handleNomeUsuario(event.target.value);
-}}value={nomeDoUsoario} /><button type="button"onClick={handleBuscar} >Buscar</button>
+}}value={nomeDoUsoario} /><button type="button"onClick={consultaRepos} >Buscar</button>
       <div className={styles.containerRepositorio}>
       <Repositorio dados={repositorios2} destacar={idSelecionado}/>
       </div>
