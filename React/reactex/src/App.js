@@ -1,8 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import { useReducer } from 'react';
 
-const initialState = {date:[]};
+import './App.css';
+import { AuthProvider} from './contexts/auth';
+import { Tema } from './components/Tema';
+import { Layout } from './components/Layout';
+
+
+
 
 function reducer(state, action) {
   switch (action.type) {
@@ -17,7 +20,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+
   
   return (
     <>
@@ -27,7 +30,17 @@ function App() {
       <ul>
       {state.date.map((item,index) => <li key={index}>{item}</li>)}
       </ul>
+    <AuthProvider>
+      <>
+      <Tema/>
+      <Layout/>
+    
+
     </>
+      
+    </AuthProvider>
+    
+
   );
 }
 
