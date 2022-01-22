@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import './App.css';
 import { AuthProvider} from './contexts/auth';
@@ -45,3 +46,5 @@ function App() {
 }
 
 export default App;
+=======
+>>>>>>> 77fb882d02106ac92c653999288a1e603b58698d
