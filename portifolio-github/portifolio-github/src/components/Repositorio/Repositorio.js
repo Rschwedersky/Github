@@ -1,18 +1,20 @@
 import PropTypes from "prop-types";
-export const Repositorio = ({dados, destacar}) => {
+import styles from "./Repositorio.module.css"
+
+
+export const Repositorio = ({dados, destacar, func}) => {
   return (
     <>
     {dados.map((item) => (
-    <article key={item.id}>
-      <h3>{item.titulo}</h3>
-      <p>{item.descricao}</p>
+    <article onClick={() => func(item.id)} className={styles.card} style={destacar===item.id?{backgroundColor: "lightblue"  }:{ }} key={item.id}>
+      <h3>{item.name}</h3>
+      <p>{item.description}</p>
       </article> ))}
       </>
   );
     }
     
   Repositorio.propTypes = {
-    dados: PropTypes.object.isRequired,
-    destaque: PropTypes.bool.isRequired,
+
   };
   
