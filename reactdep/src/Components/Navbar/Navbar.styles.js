@@ -9,10 +9,12 @@ export const Title = styled.div`
   ${({ primary, theme }) => ({
     color: primary ? theme.colors.primary.main : theme.colors.secondary.main,
     backgroundColor: primary ? theme.colors.secondary.main : theme.colors.primary.main,
-  })}
+  })};
+  
 `;
 
 export const Botao = styled.button`
+  margin-right: 1px;
   padding: 5px;
   background-color: ${({ theme }) => theme.colors.secondary.main};
   cursor: pointer;

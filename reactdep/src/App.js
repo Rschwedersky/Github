@@ -6,11 +6,11 @@ import { AuthProvider} from './contexts/auth';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './themes/GlobalStyles';
 import { myTheme } from './themes/themes';
+import { Card } from './Components/Card/Card';
 
 
 
 function App() {
-  const[tema, setTema]= useState();
 
   return (
   <>
@@ -18,7 +18,8 @@ function App() {
       <ThemeProvider theme={myTheme}>
         <GlobalStyle />
           <div className="App">
-          <Navbar estado={tema} setEstado={setTema}/>
+          <Navbar/>
+          <Card/>
           </div>
       </ThemeProvider>
     </AuthProvider>

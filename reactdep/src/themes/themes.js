@@ -1,14 +1,14 @@
 export const myTheme = {
   colors: {
     primary: {
-      light: '#e54848',
-      main: 'red',
-      dark: '#bd0303',
+      light: '#848484',
+      main: '#666',
+      dark: '#474747',
     },
     secondary: {
-      light: '#e2e281',
-      main: 'yellow',
-      dark: '#b0b007',
+      light: '#d1ff33',
+      main: '#c6ff00',
+      dark: '#8ab200',
     },
   },
 };
