@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from './themes/GlobalStyles';
 import { myTheme } from './themes/themes';
 import { Card } from './Components/Card/Card';
+import { Formulario } from './Components/Formulario/Formulario';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <GlobalStyle />
           <div className="App">
           <Navbar/>
+          <Formulario/>
           <Card/>
           </div>
       </ThemeProvider>
