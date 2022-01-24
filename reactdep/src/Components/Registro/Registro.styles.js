@@ -16,6 +16,7 @@ export const Model = styled.div`
 	z-index: auto;
 	display: ${({show}) => (show ? 'block' : 'none')};
 	position: fixed;
+  border: 2px solid #37474f;
 	top: 20%;
 	left: 20%;
   background-color:#cfd8dc;
