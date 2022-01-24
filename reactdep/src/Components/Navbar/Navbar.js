@@ -12,7 +12,7 @@ export const Navbar = (estado) =>{
  <Title primary={!state.dark}>Nome da Aplicação
     
     
-    <Botao onClick={()=>state.setCadastroAberto(true)}>Abrir Cadastro</Botao>
+    <Botao onClick={()=>state.cadastroAberto?state.setCadastroAberto(false):state.setCadastroAberto(true)}>{state.cadastroAberto?'Fechar Cadastro':'Abrir Cadastro'}</Botao>
     
     
     
