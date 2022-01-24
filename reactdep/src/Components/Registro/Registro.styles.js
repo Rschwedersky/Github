@@ -13,11 +13,15 @@ export const Botao = styled.button`
 `;
 
 export const Model = styled.div`
-	z-index: auto;
+${({ primary, theme }) => ({
+  color: !primary ? theme.colors.primary.main : theme.colors.secondary.main,
+  backgroundColor: !primary ? theme.colors.secondary.main : theme.colors.primary.main,
+})};
+  z-index: auto;
 	display: ${({show}) => (show ? 'block' : 'none')};
 	position: fixed;
+  border-radius: 3px;
   border: 2px solid #37474f;
 	top: 20%;
 	left: 20%;
-  background-color:#cfd8dc;
 `;

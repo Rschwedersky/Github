@@ -39,7 +39,7 @@ export const Registro = () => {
   };
 
   return (
-    <Model show={cadastroAberto}>
+    <Model show={cadastroAberto} primary={dark}>
       <h1>Registro</h1>
 
       <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={schema} validateOnMount>

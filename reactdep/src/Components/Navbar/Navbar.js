@@ -9,7 +9,7 @@ export const Navbar = (estado) =>{
     
  
  return(<>
- <Title primary={!state.dark}>Nome da Aplicação
+ <Title primary={!state.dark}>CaraBook
     
     
     <Botao onClick={()=>state.cadastroAberto?state.setCadastroAberto(false):state.setCadastroAberto(true)}>{state.cadastroAberto?'Fechar Cadastro':'Abrir Cadastro'}</Botao>
