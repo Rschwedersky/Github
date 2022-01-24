@@ -27,8 +27,8 @@ export const Registro = () => {
   };
 
   const schema = Yup.object().shape({
-    nome: Yup.string().required('Campo obrigatório').max(15, 'Máximo 15 caracteres'),
-    descricao: Yup.string().required('Campo obrigatório').max(15, 'Máximo 15 caracteres'),
+    nome: Yup.string().required('Campo obrigatório').max(100, 'Máximo 100 caracteres'),
+    descricao: Yup.string().required('Campo obrigatório').min(10, 'Mínimo 10 caracteres'),
     
   });
 
