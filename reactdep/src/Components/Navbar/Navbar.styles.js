@@ -19,7 +19,7 @@ export const Botao = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary.main};
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary.main};
-  border: none;
+  border: 2px solid #37474f;
   border-radius: 3px;
   &:hover {
     background-color: ${({ theme }) => theme.colors.secondary.dark};

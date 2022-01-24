@@ -8,7 +8,7 @@ import { GlobalStyle } from './themes/GlobalStyles';
 import { myTheme } from './themes/themes';
 import { Card } from './Components/Card/Card';
 import { Formulario } from './Components/Formulario/Formulario';
-
+import {Registro} from './Components/Registro/Registro'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <GlobalStyle />
           <div className="App">
           <Navbar/>
-          <Formulario/>
+         <Registro/>
           <Card/>
           </div>
       </ThemeProvider>
